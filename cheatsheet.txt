@@ -1,0 +1,7 @@
+kubectl get po -n dcone | grep document | awk '{print $1}' | xargs kubectl logs -f -n dcone
+
+******************* Steps to add the existing git repo to the new local git repo ************************************
+git remote add <remote_name> <git_url>
+git pull <remote_name> <git_repo_branch_name>
+git push --set-upstream <remote_name> <branch_name>
+**********************************************************************************************************************
